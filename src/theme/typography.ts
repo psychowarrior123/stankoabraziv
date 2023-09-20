@@ -34,7 +34,7 @@ export const fontPresets = {
     ...baseFontPreset,
   },
   H5: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: "18px",
     lineHeight: "25px",
     ...baseFontPreset,
