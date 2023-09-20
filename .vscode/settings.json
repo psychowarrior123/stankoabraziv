@@ -1,0 +1,29 @@
+{
+    "workbench.startupEditor": "none",
+    "git.confirmSync": false,
+    "npm.enableRunFromFolder": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "reactSnippets.settings.prettierEnabled": true,
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "editor.formatOnType": true,
+    "prettier.bracketSameLine": true,
+    "prettier.endOfLine": "auto",
+    "prettier.jsxSingleQuote": true,
+    "prettier.prettierPath": " ./node_modules/prettier",
+    "prettier.semi": false,
+    "prettier.singleAttributePerLine": true,
+    "prettier.useTabs": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.vueIndentScriptAndStyle": true,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/*.json"
+            ],
+            "url": "/JSON_Schema/Color_Schema.json"
+        }
+    ]
+}

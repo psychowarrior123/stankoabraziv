@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "VS Code Color Picker",
+    "description": "Test json schema for VS Code color picker",
+    "type": "object",
+    "properties": {
+        "hex-color": {"type": "string","format": "color"},
+        "short-hex-color": {"type": "string","format": "color"},
+        "rgb-color": {"type": "string","format": "color"},
+        "rgba-color": {"type": "string","format": "color"},
+        "hsl-color": {"type": "string","format": "color"},
+        "hsla-color": {"type": "string","format": "color"},
+        "html-color": {"type": "string","format": "color"}
+    }
+}
