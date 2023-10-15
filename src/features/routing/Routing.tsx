@@ -4,6 +4,8 @@ import App from '../../App'
 import { Main } from '../main/Main'
 import { Link, Stack, Typography } from '@mui/material'
 import { Layout } from '../layout/Layout'
+import { DiamondToolItemsPage } from '../diamond/DiamondToolItemsPage'
+import { DiamondPage } from '../diamond/DiamondPage'
 
 const Urina: React.FC = () => {
     return <Layout>
@@ -30,6 +32,8 @@ export const Routing: React.FC = () => {
     return <Routes>
         <Route path='/urina' Component={Urina} />
         <Route path='/sucks' Component={Sucks} />
+        <Route path='/diamond/:type' Component={DiamondToolItemsPage} />
+        <Route path='/diamond' Component={DiamondPage} />
         <Route path='/' Component={Main} />
     </Routes>
 }

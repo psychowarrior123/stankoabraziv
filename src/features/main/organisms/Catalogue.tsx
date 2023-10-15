@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Paper, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Link, Paper, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { FC } from "react";
 
 export const Catalogue: FC = () => {
@@ -26,13 +26,22 @@ export const Catalogue: FC = () => {
             <AccordionSummary>
               <Typography variant="H6">Алмазный инструмент</Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body"  whiteSpace="pre-wrap">
+          <AccordionDetails>
+            <Stack spacing={1}>
+            <Link href="/diamond/straight">Круги прямого профиля</Link>
+            <Link href="/diamond/disc">Круги тарельчатые</Link>
+            <Link href="/diamond/cup">Круги чашечные</Link>
+            <Link href="/diamond/cbn">Круги эльборовые</Link>
+            <Typography variant="body" whiteSpace="pre-wrap" style={{marginTop: 20}}>
+                БОНУСНЫЙ АНЕКДОТ!!!
+                {'\n'}
+                {'\n'}
                 Парень приводит девушку домой, знакомиться. Та заходит в коридор, наклоняется туфли снять и громко пердит, смущается и смотря в потолок говорит:{'\n'}
                 - Ой, какая у Вас люстра красивая...{'\n'}
                 Ей парень отвечает:{'\n'}
                 - В зал зайдешь вообще обосрёшься!
               </Typography>
+              </Stack>
             </AccordionDetails>
           </Accordion>
           <Accordion>

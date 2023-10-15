@@ -1,19 +1,23 @@
-import { StackProps, Stack, Typography, Link } from "@mui/material";
+import { StackProps, Stack, Typography, Link, useMediaQuery, useTheme } from "@mui/material";
 import { FC } from "react";
 
 export const Footer: FC<StackProps> = ({ sx, ...props }) => {
+    const theme = useTheme()
+    const matches = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
     return (
         <Stack
             alignItems="center"
-            direction="row"
+            direction={matches ? "column" : "row"}
             sx={{
                 p: 4,
                 bgcolor: (theme) => theme.palette.colors.black,
                 ...sx
             }}
+            justifyContent="space-between"
+            spacing={4}
             {...props}
         >
-        <Stack direction="row" spacing={3}>
+            <Stack direction="row" spacing={3}>
                 <Typography variant="H6" color="colors.white">Контакты</Typography>
                 <Stack spacing={2}>
                     <Stack direction="row" spacing={1}>
@@ -61,7 +65,8 @@ export const Footer: FC<StackProps> = ({ sx, ...props }) => {
                         </Stack>
                     </Stack>
                 </Stack>
+            </Stack>
+            <Typography variant="H6" color="colors.white">Спасибо за то, что выбрали нас!</Typography>
         </Stack>
-    </Stack>
     )
 }

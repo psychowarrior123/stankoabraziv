@@ -1,5 +1,7 @@
-import { Breadcrumbs, Input, Link, Paper, Stack, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Autocomplete, Breadcrumbs, Input, Link, Paper, Stack, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { FC } from "react";
+import diamondItems from '../../diamond/data/diamondItems.json'
+import { ToolType } from "../../diamond/types";
 
 export const GeneralBlock: FC = () => {
   const theme = useTheme()
@@ -10,8 +12,12 @@ export const GeneralBlock: FC = () => {
         <Link href="/">Главная</Link>
         <Link href="/urina">Ссанина</Link>
         <Link href="/sucks">Говно</Link>
+        <Link href="/diamond">Алмазный инструмент</Link>
       </Breadcrumbs>
-      <TextField placeholder="Ищи-ищи... Заебешься искать" />
+      <Autocomplete
+        freeSolo
+        options={Object.keys(diamondItems).map((key) => diamondItems[key as ToolType].map((item) => `${item.title} ${item.text}`)).flat(Infinity)}
+        renderInput={(params) => <TextField {...params} placeholder="Ищи-ищи... Заебешься искать" />} />
       <Stack width="100%" alignItems="center" spacing={2}>
         <Typography variant="H3">
           Популярные товары

@@ -25,5 +25,6 @@
             ],
             "url": "/JSON_Schema/Color_Schema.json"
         }
-    ]
+    ],
+    "editor.tabSize": 1
 }
