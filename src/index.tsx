@@ -13,11 +13,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routing />
-      </BrowserRouter>
-    </ThemeProvider>
+    <App />
   </React.StrictMode>
 );
 

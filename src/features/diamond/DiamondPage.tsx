@@ -1,17 +1,16 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Layout } from "../layout/Layout";
 import { Item } from "./molecules/Item";
 import { Grid, Link } from "@mui/material";
 import main from './data/diamondMain.json'
 
 export const DiamondPage: FC = () => {
- return <Layout>
+  return <Layout currentFeature="diamond">
   <Grid container spacing={3}>
     <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
      <Link href='/diamond/cbn'>
      <Item
       {...main.cbn}
-      withLink
       sx={{
        borderRadius: 2,
        transition: 'all 0.3s',
@@ -27,7 +26,6 @@ export const DiamondPage: FC = () => {
      <Link href='/diamond/cup'>
       <Item
       {...main.cup}
-      withLink
       sx={{
        borderRadius: 2,
        transition: 'all 0.3s',
@@ -43,7 +41,6 @@ export const DiamondPage: FC = () => {
      <Link href='/diamond/disc'>
       <Item
       {...main.disc}
-      withLink
       sx={{
        borderRadius: 2,
        transition: 'all 0.3s',
@@ -59,7 +56,6 @@ export const DiamondPage: FC = () => {
      <Link href='/diamond/straight'>
       <Item
       {...main.straight}
-      withLink
       sx={{
        borderRadius: 2,
        transition: 'all 0.3s',

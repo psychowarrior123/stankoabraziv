@@ -6,9 +6,10 @@ import { Link, Stack, Typography } from '@mui/material'
 import { Layout } from '../layout/Layout'
 import { DiamondToolItemsPage } from '../diamond/DiamondToolItemsPage'
 import { DiamondPage } from '../diamond/DiamondPage'
+import { ContactUsPage } from '../contact-us/ContactUsPage'
 
 const Urina: React.FC = () => {
-    return <Layout>
+    return <Layout currentFeature='main'>
         <Stack alignItems="center" justifyContent="center" spacing={4}>
             <Typography variant='H1'>ЭТО ССАНИНА</Typography>
             <img src='/ssanina_psa.jpg' />
@@ -18,7 +19,7 @@ const Urina: React.FC = () => {
 }
 
 const Sucks: React.FC = () => {
-    return <Layout>
+    return <Layout currentFeature='main'>
         <Stack alignItems="center" justifyContent="center" spacing={4}>
             <Typography variant='H1'>ЭТО ГОВНО</Typography>
             <img src='/govno.jpg' />
@@ -34,6 +35,7 @@ export const Routing: React.FC = () => {
         <Route path='/sucks' Component={Sucks} />
         <Route path='/diamond/:type' Component={DiamondToolItemsPage} />
         <Route path='/diamond' Component={DiamondPage} />
+        <Route path='/contact-us' Component={ContactUsPage} />
         <Route path='/' Component={Main} />
     </Routes>
 }

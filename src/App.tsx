@@ -1,19 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Routing } from './features/routing/Routing';
+import { ThemeProvider } from '@mui/material';
+import { theme } from './theme';
+import { HeadProvider } from 'react-head';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Ща буду писать хуйню, пока атом вертится.
-        </p>
-        <a href='/sucks' className="App-link">ГОВНО</a>
-        <a href='/urina' className="App-link">МОЧА</a>
-      </header>
-    </div>
+    <HeadProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routing />
+        </BrowserRouter>
+      </ThemeProvider>
+    </HeadProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ToolItem } from "../types";
-import { Link, Stack, StackProps, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {Link as MuiLink, Stack, StackProps, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({ image, title, text, subtext, withLink, ...props }) => {
  const theme = useTheme()
@@ -11,7 +12,7 @@ export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({ image
    <Typography variant="H6">{title}</Typography>
    <Typography variant="body">{text}</Typography>
    {subtext && <Typography variant="caption">{subtext}</Typography>}
-   {withLink && <Link href='/sucks'>Узнать размер и стоимость</Link>}
+   {withLink && <Link to='/contact-us' style={{ textDecoration: 'none' }} state={{ item: `${title} ${text}` }}><MuiLink>Узнать размер и стоимость</MuiLink></Link>}
   </Stack>
  </Stack>
 }

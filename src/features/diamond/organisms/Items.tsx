@@ -7,7 +7,7 @@ export const Items: FC<{ items: ToolItem[]; withLink?: boolean }> = ({ items, wi
  return <Grid container spacing={3}>
   {
    items.map((item) => (
-    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
+    <Grid key={item.text} item xs={12} sm={6} md={6} lg={4} xl={3}>
      <Item {...item} withLink={withLink} />
     </Grid>
    ))

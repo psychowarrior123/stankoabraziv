@@ -18,13 +18,5 @@
     "prettier.useTabs": true,
     "prettier.htmlWhitespaceSensitivity": "strict",
     "prettier.vueIndentScriptAndStyle": true,
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "/*.json"
-            ],
-            "url": "/JSON_Schema/Color_Schema.json"
-        }
-    ],
     "editor.tabSize": 1
 }

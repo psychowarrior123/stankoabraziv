@@ -8,7 +8,7 @@ import { Brands } from "./organisms/Brands";
 export const Main: FC = () => {
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
-    return <Layout>
+    return <Layout currentFeature="main">
         <Stack spacing={2}>
             <Stack spacing={2} direction={matches ? "column" : "row"}>
                 <Catalogue />
