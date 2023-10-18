@@ -6,7 +6,7 @@ import main from './data/abrazivMain.json'
 
 export const AbrazivPage: FC = () => {
   return (
-    <Layout currentFeature="diamond">
+    <Layout currentFeature="abraziv">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
           <Link href="/abraziv/zatochnie-krygi-Grand">

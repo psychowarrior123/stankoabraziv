@@ -36,10 +36,10 @@ export const GeneralBlock: FC = () => {
         <Stack width="100%" alignItems="center" spacing={2}>
           <Typography variant="H3">Популярные товары</Typography>
           <Stack direction="row" gap={2} flexWrap="wrap">
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_bekelit.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_premium.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_polotno.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/slave.jpeg" />
+            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_bekelit.jpg" alt="popular_grand_bekelit.jpg" />
+            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_premium.jpg" alt="popular_grand_premium.jpg" />
+            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_polotno.jpg" alt="popular_polotno.jpg" />
+            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/slave.jpeg" alt='slave.jpeg' />
           </Stack>
         </Stack>
       </Stack>
