@@ -1,42 +1,42 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles'
 import {
   Palette as MuiPallete,
-  PaletteOptions as MuiPaletteOptions,
-} from "@mui/material/styles/createPalette";
+  PaletteOptions as MuiPaletteOptions
+} from '@mui/material/styles/createPalette'
 
-import { TFonts, typography } from "./typography";
-import { colors, TColors } from "./colors";
-import { breakpoints } from "./breakpoints";
+import { TFonts, typography } from './typography'
+import { colors, TColors } from './colors'
+import { breakpoints } from './breakpoints'
 
-declare module "@mui/material/styles/createPalette" {
+declare module '@mui/material/styles/createPalette' {
   // @ts-ignore
   interface Palette extends MuiPallete {
-    colors: TColors;
+    colors: TColors
   }
 
   // @ts-ignore
   interface PaletteOptions extends MuiPaletteOptions {
-    colors?: TColors;
+    colors?: TColors
   }
 }
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface TypographyVariants extends TFonts {}
 
   interface TypographyVariantsOptions extends TFonts {}
 }
 
-type TypesToTrue<T> = { [K in keyof T]: true };
+type TypesToTrue<T> = { [K in keyof T]: true }
 
-declare module "@mui/material/Typography" {
+declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides extends TypesToTrue<TFonts> {}
 }
 
 export const theme = createTheme({
   palette: {
-    colors: colors,
+    colors: colors
   },
   breakpoints: {
-    values: breakpoints,
+    values: breakpoints
   },
   spacing: 5,
   components: {
@@ -44,23 +44,23 @@ export const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          color: colors.black,
-        },
-      },
+          color: colors.black
+        }
+      }
     },
     MuiFormLabel: {},
     MuiLink: {
       defaultProps: {
-        underline: "none",
+        underline: 'none'
       },
       styleOverrides: {
         root: {
           color: colors.blue,
-          "&:hover": {
-            color: colors.hoverBlue,
-          },
-        },
-      },
+          '&:hover': {
+            color: colors.hoverBlue
+          }
+        }
+      }
     },
     // MuiChip: {
     //   styleOverrides: {
@@ -69,9 +69,9 @@ export const theme = createTheme({
     // }
     MuiButton: {
       defaultProps: {
-        disableElevation: true,
-      },
-    },
+        disableElevation: true
+      }
+    }
     //   styleOverrides: {
     //     root: {
     //       textTransform: 'none'
@@ -134,5 +134,5 @@ export const theme = createTheme({
     //   }
     // }
   },
-  typography,
-});
+  typography
+})
