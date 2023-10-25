@@ -21,8 +21,8 @@ export const GeneralBlock: FC = () => {
       <Stack spacing={4}>
         <Breadcrumbs>
           <Link href="/">Главная</Link>
-          <Link href="/urina">Ссанина</Link>
-          <Link href="/sucks">Говно</Link>
+          <Link href="/urina">Пилы</Link>
+          <Link href="/sucks">Ножи</Link>
           <Link href="/diamond">Алмазный инструмент</Link>
           <Link href="/abraziv">Абразивный инструмент</Link>
         </Breadcrumbs>
@@ -31,15 +31,35 @@ export const GeneralBlock: FC = () => {
           options={Object.keys(diamondItems)
             .map((key) => diamondItems[key as DiamondType].map((item) => `${item.title} ${item.text}`))
             .flat(Infinity)}
-          renderInput={(params) => <TextField {...params} placeholder="Ищи-ищи... Заебешься искать" />}
+          renderInput={(params) => <TextField {...params} placeholder="поиск" />}
         />
         <Stack width="100%" alignItems="center" spacing={2}>
           <Typography variant="H3">Популярные товары</Typography>
           <Stack direction="row" gap={2} flexWrap="wrap">
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_bekelit.jpg" alt="popular_grand_bekelit.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_grand_premium.jpg" alt="popular_grand_premium.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/popular_polotno.jpg" alt="popular_polotno.jpg" />
-            <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/slave.jpeg" alt='slave.jpeg' />
+            <img
+              width={matches ? 200 : 300}
+              height={matches ? 200 : 300}
+              src="/popular_tovari/elbor_popular.png"
+              alt="elbor_popular.png"
+            />
+            <img
+              width={matches ? 200 : 300}
+              height={matches ? 200 : 300}
+              src="/popular_tovari/145x3.2-benzpopular.png"
+              alt="benzopili_popular.png"
+            />
+            <img
+              width={matches ? 200 : 300}
+              height={matches ? 200 : 300}
+              src="/popular_tovari/max_popular.jpg"
+              alt="max_popular.jpg"
+            />
+            <img
+              width={matches ? 200 : 300}
+              height={matches ? 200 : 300}
+              src="/popular_tovari/carborundum_popular.jpg"
+              alt="carborundum_popular.jpg"
+            />
           </Stack>
         </Stack>
       </Stack>

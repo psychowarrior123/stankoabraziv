@@ -1,4 +1,4 @@
-import { Box, Link, Stack, StackProps, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Stack, StackProps, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { FC } from 'react'
 import { useNavigate } from 'react-router'
 
@@ -21,7 +21,7 @@ export const Header: FC<StackProps> = ({ sx, ...props }) => {
       {...props}
     >
       <img
-        src="/logo.png"
+        src="/logo2.jpg"
         style={{
           borderRadius: '10px',
           marginTop: '20px',
@@ -35,7 +35,7 @@ export const Header: FC<StackProps> = ({ sx, ...props }) => {
       <Stack alignItems="center" justifyContent="center" width="100%">
         <Stack spacing={10} alignItems="flex-end">
           <Typography variant={mobile ? 'H6' : tablet ? 'H3' : 'H1'}>
-            Станкоабразив приветсвует Вас! Мистер хуйло!
+            Станкоабразив приветсвует Вас!
           </Typography>
           <Typography variant={mobile ? 'H6' : tablet ? 'H4' : 'H3'}>+7 (495) 510-42-60</Typography>
         </Stack>
