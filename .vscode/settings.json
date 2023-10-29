@@ -79,7 +79,7 @@
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.suggest.completeFunctionCalls": true,
-  "workbench.colorTheme": "Visual Studio 2019 Dark",
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.startupEditor": "none",
   "emmet.includeLanguages": {
     "javascript": "html"
