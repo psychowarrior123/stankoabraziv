@@ -239,7 +239,6 @@ export const ContactUsForm: FC<PaperProps> = ({ sx, ...props }) => {
             onClick={() => {
               form.handleSubmit((values) => {
                 const enter = encodeURI('\n')
-                console.log(enter)
                 window.open(
                   `mailto:stankoabraziv@list.ru?subject=Узнать размеры&body=
 Имя: ${values.name}${enter}
