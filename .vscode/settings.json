@@ -3,7 +3,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "svipas.prettier-plus"
   },
   "css.format.spaceAroundSelectorSeparator": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -86,5 +87,8 @@
   },
   "editor.codeActionsOnSave": {
     "source.removeUnusedImports": "explicit"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
   }
 }

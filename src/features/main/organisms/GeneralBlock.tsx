@@ -10,8 +10,9 @@ import {
   useTheme
 } from '@mui/material'
 import { FC } from 'react'
-import diamondItems from '../../diamond/data/diamondItems.json'
 import { DiamondType } from '../../../components/types'
+import links from '../../../data/links.json'
+import diamondItems from '../../../data/items/diamondItems.json'
 
 export const GeneralBlock: FC = () => {
   const theme = useTheme()
@@ -20,18 +21,20 @@ export const GeneralBlock: FC = () => {
     <Paper elevation={24} sx={{ p: 8, ...(!matches && { width: '100%' }) }}>
       <Stack spacing={4}>
         <Breadcrumbs>
-          <Link href="/">Главная</Link>
-          <Link href="/urina">Пилы</Link>
-          <Link href="/sucks">Ножи</Link>
-          <Link href="/diamond">Алмазный инструмент</Link>
-          <Link href="/abraziv">Абразивный инструмент</Link>
+          {links.main.map((link) => {
+            return (
+              <Link href={`/${link.href}`} key={link.href}>
+                {link.title}
+              </Link>
+            )
+          })}
         </Breadcrumbs>
         <Autocomplete
           freeSolo
           options={Object.keys(diamondItems)
             .map((key) => diamondItems[key as DiamondType].map((item) => `${item.title} ${item.text}`))
             .flat(Infinity)}
-          renderInput={(params) => <TextField {...params} placeholder="поиск" />}
+          renderInput={(params) => <TextField {...params} placeholder="Поиск" />}
         />
         <Stack width="100%" alignItems="center" spacing={2}>
           <Typography variant="H3">Популярные товары</Typography>

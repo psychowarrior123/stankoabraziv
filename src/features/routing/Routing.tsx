@@ -1,12 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
-import { Main } from '../main/Main'
 import { Link, Stack, Typography } from '@mui/material'
 import { Layout } from '../layout/Layout'
-import { DiamondToolItemsPage } from '../diamond/DiamondToolItemsPage'
-import { DiamondPage } from '../diamond/DiamondPage'
+import { ItemsPage } from '../../components/ItemsPage'
+import { ToolPage } from '../../components/ToolPage'
 import { ContactUsPage } from '../contact-us/ContactUsPage'
-import { AbrazivToolItemsPage } from '../abraziv/AbrazivToolItemsPage'
-import { AbrazivPage } from '../abraziv/AbrazivPage'
+import { Main } from '../main/Main'
 
 const Urina: React.FC = () => {
   return (
@@ -37,10 +35,8 @@ export const Routing: React.FC = () => {
     <Routes>
       <Route path="/urina" Component={Urina} />
       <Route path="/sucks" Component={Sucks} />
-      <Route path="/diamond/:type" Component={DiamondToolItemsPage} />
-      <Route path="/diamond" Component={DiamondPage} />
-      <Route path="/abraziv/:type" Component={AbrazivToolItemsPage} />
-      <Route path="/abraziv" Component={AbrazivPage} />
+      <Route path="/:category/:type" Component={ItemsPage} />
+      <Route path="/:category" Component={ToolPage} />
       <Route path="/contact-us" Component={ContactUsPage} />
       <Route path="/" Component={Main} />
     </Routes>
