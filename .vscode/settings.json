@@ -85,6 +85,6 @@
     "javascript": "html"
   },
   "editor.codeActionsOnSave": {
-    "source.removeUnusedImports": true
+    "source.removeUnusedImports": "explicit"
   }
 }

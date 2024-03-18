@@ -1,16 +1,15 @@
-import
-  {
-    Button,
-    Checkbox,
-    FormControl,
-    FormControlLabel,
-    FormHelperText,
-    Paper,
-    PaperProps,
-    Stack,
-    TextField,
-    Typography
-  } from '@mui/material'
+import {
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormHelperText,
+  Paper,
+  PaperProps,
+  Stack,
+  TextField,
+  Typography
+} from '@mui/material'
 import { FC } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { useLocation } from 'react-router'
