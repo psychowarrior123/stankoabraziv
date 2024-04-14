@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Button, Link, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Stack, useMediaQuery, useTheme } from '@mui/material'
 import { Layout } from '../layout/Layout'
 import { Catalogue } from './organisms/Catalogue'
 import { GeneralBlock } from './organisms/GeneralBlock'

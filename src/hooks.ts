@@ -7,7 +7,6 @@ export const useGetData = () => {
 
   const getData = async ( section: string, category?: string ) =>
   {
-    console.log(`./data/${section}/${category}${capitalize(section)}`)
     try {
       setIsLoading(true)
       const result: { default: any } = await import(`./data/${section}/${category}${capitalize(section)}`)
