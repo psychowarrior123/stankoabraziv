@@ -1,1 +1,38 @@
-{}
+{
+  "lentochnay-pilorama-tayga": {
+    "title": "Электрические ленточные пилорамы Тайга",
+    "text": "",
+    "image": "/piloram/t-1m.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "benzinlentoch-pilorama-tayga": {
+    "title": "Бензиновые ленточные пилорамы Тайга ",
+    "text": "",
+    "image": "/piloram/t-2msuperysilen.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "disk-pilorama-tayga": {
+    "title": "Дисковая пилорама Тайга ",
+    "text": "",
+    "image": "/piloram/disk-piloram-tayga.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "lentochnay-pilorama-altay": {
+    "title": "Ленточные электрические пилорамы Алтай",
+    "text": "",
+    "image": "/piloram/altaylentocnay.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "lentochnaybenz-pilorama-altay": {
+    "title": "Ленточные бензиновые пилорамы Алтай",
+    "text": "",
+    "image": "/piloram/altay900.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "disk-pilorama-altay": {
+    "title": "Дисковые пилорамы Алтай",
+    "text": "",
+    "image": "/piloram/gorizdisaltay.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  }
+}

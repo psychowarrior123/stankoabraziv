@@ -5,8 +5,7 @@ export const useGetData = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [data, setData] = useState<{ [key: string]: any }>()
 
-  const getData = async ( section: string, category?: string ) =>
-  {
+  const getData = async (section: string, category?: string) => {
     console.log(`./data/${section}/${category}${capitalize(section)}`)
     try {
       setIsLoading(true)

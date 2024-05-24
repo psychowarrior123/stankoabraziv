@@ -1,1 +1,38 @@
-{}
+{
+  "strogalinye-knife": {
+    "title": "Строгальные ножи HSS IRONMAC PROFI",
+    "text": "Ножи строгальные из быстрорежущей стали HSS IRONMAC PROFI Быстрорежущая сталь HSS18% Длина: 100 - 1050 мм Ширина: 25 - 40 мм Толщина: 3 мм",
+    "image": "/knife/knife-strogalnye.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "knifewodds": {
+    "title": "Ножи строгальные DS",
+    "text": "Строгальные ножи из стали DS предназначены для прямолинейной обработки мягких пород древесины.",
+    "image": "/knife/knifewoodteck.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "knifewodhss": {
+    "title": "Ножи строгальные HSS",
+    "text": "Имеют хороший ресурс по мягкой древесине 7000 – 8000 метров погонных. Не подходят для обработки МДФ, ДСП.",
+    "image": "/knife/hsswoodtech.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "barabanye-knife": {
+    "title": "Ножевые барабаны для плоского строгания на четырехсторонний станок",
+    "text": "Ножевые барабаны для плоского строгания на четырехсторонний станок",
+    "image": "/knife/baraban-knife.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "blanket-knife": {
+    "title": "Бланкетные ножи HSS",
+    "text": "",
+    "image": "/knife/blacetniy-fnife.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "djoytnery": {
+    "title": "Джоинтерный (Jointer) камень",
+    "text": "Применяется на 4-ех сторонних станках Leadermac и Weining для автоматической заточки строгальных ножей.",
+    "image": "/knife/djoytner.jpg",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  }
+}

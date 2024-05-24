@@ -35,7 +35,7 @@ export const Header: FC<StackProps> = ({ sx, ...props }) => {
       <Stack alignItems="center" justifyContent="center" width="100%">
         <Stack spacing={10} alignItems="flex-end">
           <Typography variant={mobile ? 'H6' : tablet ? 'H3' : 'H1'}>
-            Станкоабразив приветсвует Вас!
+            Станко-Абразив приветсвует Вас!
           </Typography>
           <Typography variant={mobile ? 'H6' : tablet ? 'H4' : 'H3'}>+7 (495) 510-42-60</Typography>
         </Stack>

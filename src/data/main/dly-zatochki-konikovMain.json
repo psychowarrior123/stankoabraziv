@@ -1,1 +1,26 @@
-{}
+{
+  "krygi-SSM": {
+    "title": "Круги для станков SSM",
+    "text": "",
+    "image": "/zatochka-konikov/ssm.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "krygi-Prosharp": {
+    "title": "Круги для станков Prosharp",
+    "text": "",
+    "image": "/zatochka-konikov/prosharp.jpg",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "bryski": {
+    "title": "Бруски",
+    "text": "для снятия заусенцев с коньков",
+    "image": "/zatochka-konikov/25x6x100.png",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  },
+  "Almaznye-karandashi": {
+    "title": "Алмазный карандаш",
+    "text": "",
+    "image": "/zatochka-konikov/karandash.jpg",
+    "subtext": "+7 (495) 510-42-60 или на почту stankoabraziv@list.ru"
+  }
+}

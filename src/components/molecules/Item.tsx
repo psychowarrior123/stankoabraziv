@@ -34,7 +34,7 @@ export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({
             style={{ textDecoration: 'none' }}
             state={{ item: `${capitalize(title)} ${capitalize(text)}` }}
           >
-            <MuiLink>Узнать размер и стоимость</MuiLink>
+            <MuiLink>Узнать о наличии и стоимость</MuiLink>
           </Link>
         )}
       </Stack>
