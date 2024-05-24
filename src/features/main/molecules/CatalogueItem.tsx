@@ -12,7 +12,6 @@ export const CatalogueItem: FC<{ category: string; title: string; description?: 
   useEffect(() => {
     getData('main', category)
   }, [category])
-  console.log(data, category)
 
   const keys = useMemo(() => Object.keys(data ?? {}), [data])
 
