@@ -31,7 +31,6 @@ export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
     getData('main', breadcrumbs[0])
   }, [breadcrumbs])
 
-  console.log(breadcrumbs, location, data)
   return (
     <>
       <Title>{`${!!translate[currentFeature] ? `${translate[currentFeature]} | ` : ''}Станкоабразив`}</Title>
