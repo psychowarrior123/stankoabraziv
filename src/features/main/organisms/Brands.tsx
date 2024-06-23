@@ -1,4 +1,4 @@
-import { useMediaQuery, Paper, Stack, Typography, useTheme } from '@mui/material'
+import { Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { FC } from 'react'
 
 export const Brands: FC = () => {
@@ -9,11 +9,11 @@ export const Brands: FC = () => {
       <Stack width="100%" alignItems="center" justifyContent="center" spacing={2}>
         <Typography variant="H3">Наши партнеры</Typography>
         <Stack direction="row" gap={2} flexWrap="wrap" alignItems="center" justifyContent="center">
-          <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/brand_woodtec.jpg" />
-          <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/brand_tyrolit.png" />
-          <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/brand_leuco.jpg" />
-          <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/diskovye-pili\ironmac.jpg" />
-          <img width={matches ? 200 : 300} height={matches ? 200 : 300} src="/diskovye-pili\aspigass.png" />
+          <img height={matches ? 200 : 300} src="/brand_woodtec.jpg" alt="brand_woodtec.jpg" />
+          <img height={matches ? 200 : 300} src="/brand_tyrolit.png" alt="brand_tyrolit" />
+          <img height={matches ? 200 : 300} src="/brand_leuco.jpg" alt="brand_leuco" />
+          <img height={matches ? 200 : 300} src="/diskovye-pili/ironmac.jpg" alt="ironmac.jpg" />
+          <img height={matches ? 200 : 300} src="/diskovye-pili/aspigass.png" alt="aspigass.png" />
         </Stack>
       </Stack>
     </Paper>

@@ -1,10 +1,10 @@
+import { Box, CircularProgress } from '@mui/material'
 import { FC, useLayoutEffect } from 'react'
 import { useParams } from 'react-router'
-import { Feature } from './types'
 import { Layout } from '../features/layout/Layout'
-import { Items } from './organisms/Items'
 import { useGetData } from '../hooks'
-import { Box, CircularProgress } from '@mui/material'
+import { Items } from './organisms/Items'
+import { Feature } from './types'
 
 export const ItemsPage: FC = () => {
   const { type, category } = useParams<{ type: Feature; category: Feature }>()
@@ -14,8 +14,6 @@ export const ItemsPage: FC = () => {
   useLayoutEffect(() => {
     getData('items', category)
   }, [category])
-
-  console.log(data, category)
 
   return (
     <Layout currentFeature={type!}>

@@ -31,6 +31,7 @@ export const Header: FC<StackProps> = ({ sx, ...props }) => {
         onClick={() => {
           navigate('/')
         }}
+        alt="Logo"
       />
       <Stack alignItems="center" justifyContent="center" width="100%">
         <Stack spacing={10} alignItems="flex-end">

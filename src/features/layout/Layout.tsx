@@ -1,24 +1,14 @@
-import { Container, Stack, StackProps } from '@mui/material'
-import { FC } from 'react'
-import { Header } from './organisms/Header'
-import { Footer } from './organisms/Footer'
+import { Breadcrumbs, Container, Link, Stack, StackProps, Typography } from '@mui/material'
+import { FC, useLayoutEffect, useMemo } from 'react'
 import { Title } from 'react-head'
+import { useLocation } from 'react-router'
 import { Feature } from '../../components/types'
-
-const translate = {
-  main: '',
-  diamond: 'Алмазный инструмент',
-  abraziv: 'Абразивный инструмент',
-  cbn: 'Круги эльборовые',
-  cup: 'Круги чашечные',
-  disc: 'Круги тарельчатые',
-  straight: 'Круги прямого профиля',
-  'zatochnie-krygi-Grand': 'Шлифовальные круги Grand',
-  'zatochnie_krygi-carborundum-electrite': 'Заточные круги CARBORUNDUM ELECTRITE',
-  'zatochnie_krygi-TYROLIT': 'Шлифовальные круги Tyrolit',
-  'otreznie-krygi': 'Круги отрезные',
-  'krygi-benzopili': 'Заточные круги для цепей бензопил'
-}
+import links from '../../data/links.json'
+import translate from '../../data/translate.json'
+import { useGetData } from '../../hooks'
+import { Footer } from './organisms/Footer'
+import { Header } from './organisms/Header'
+import { pathToCurrent } from './utils'
 
 export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
   currentFeature,
@@ -26,6 +16,22 @@ export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
   sx,
   ...props
 }) => {
+  const location = useLocation()
+  const breadcrumbs = useMemo(
+    () => [
+      ...(location.state?.prevPath ? location.state?.prevPath.split('/').filter(Boolean) : []),
+      ...location.pathname.split('/').filter(Boolean)
+    ],
+    [location]
+  )
+
+  const { data, getData, isLoading } = useGetData()
+
+  useLayoutEffect(() => {
+    getData('main', breadcrumbs[0])
+  }, [breadcrumbs])
+
+  console.log(breadcrumbs, location, data)
   return (
     <>
       <Title>{`${!!translate[currentFeature] ? `${translate[currentFeature]} | ` : ''}Станкоабразив`}</Title>
@@ -37,6 +43,24 @@ export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
         }}
       >
         <Header />
+        {location.pathname !== '/' && (
+          <Breadcrumbs sx={{ padding: 8 }}>
+            <Link href="/">Главная</Link>
+            {breadcrumbs.map((item, index, self) => {
+              const isLast = index === self.length - 1
+              const href = pathToCurrent(breadcrumbs, item)
+              const value =
+                links.main.find((link) => link.href === item)?.title ?? data?.[item as Feature]?.title
+              return isLast ? (
+                <Typography>{value}</Typography>
+              ) : (
+                <Link href={href} key={item}>
+                  {value}
+                </Link>
+              )
+            })}
+          </Breadcrumbs>
+        )}
         <Container
           maxWidth="xl"
           disableGutters

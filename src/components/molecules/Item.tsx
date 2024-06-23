@@ -1,15 +1,15 @@
-import { FC } from 'react'
-import { ToolItem } from '../types'
 import {
+  capitalize,
   Link as MuiLink,
   Stack,
   StackProps,
   Typography,
   useMediaQuery,
-  useTheme,
-  capitalize
+  useTheme
 } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { FC } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { ToolItem } from '../types'
 
 export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({
   image,
@@ -21,6 +21,7 @@ export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({
 }) => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
+  const location = useLocation()
   return (
     <Stack direction={matches ? 'column' : 'row'} spacing={2} {...props}>
       <img src={image} width={200} height={200} style={{ borderRadius: '8px' }} alt={image} />
@@ -32,7 +33,7 @@ export const Item: FC<ToolItem & { withLink?: boolean } & StackProps> = ({
           <Link
             to="/contact-us"
             style={{ textDecoration: 'none' }}
-            state={{ item: `${capitalize(title)} ${capitalize(text)}` }}
+            state={{ item: `${capitalize(title)} ${capitalize(text)}`, prevPath: location.pathname }}
           >
             <MuiLink>Узнать о наличии и стоимость</MuiLink>
           </Link>

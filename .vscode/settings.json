@@ -90,5 +90,8 @@
   },
   "[json]": {
     "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
   }
 }
