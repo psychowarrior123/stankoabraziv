@@ -50,7 +50,9 @@ export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
               const isLast = index === self.length - 1
               const href = pathToCurrent(breadcrumbs, item)
               const value =
-                links.main.find((link) => link.href === item)?.title ?? data?.[item as Feature]?.title
+                links.main.find((link) => link.href === item)?.title ??
+                data?.[item as Feature]?.title ??
+                translate[item as Feature]
               return isLast ? (
                 <Typography>{value}</Typography>
               ) : (
