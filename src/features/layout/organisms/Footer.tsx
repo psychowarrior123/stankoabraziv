@@ -1,4 +1,4 @@
-import { StackProps, Stack, Typography, Link, useMediaQuery, useTheme } from '@mui/material'
+import { Link, Stack, StackProps, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { FC } from 'react'
 
 export const Footer: FC<StackProps> = ({ sx, ...props }) => {

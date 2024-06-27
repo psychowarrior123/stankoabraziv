@@ -25,7 +25,8 @@ export const colors = {
   tooltip: 'rgba(31, 38, 46, 0.8)',
   yellow: '#F9CF21',
   yellow01: 'rgba(249, 207, 33, 0.1)',
-  hoverYellow: '#C7A005'
+  hoverYellow: '#C7A005',
+  blueLogo: '#0092CB'
 }
 
 export type TColors = typeof colors

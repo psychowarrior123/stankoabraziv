@@ -7,7 +7,13 @@ export const ContactUsTemplate: FC = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <Stack spacing={8} direction={matches ? 'column' : 'row'} alignItems="center" justifyContent="center">
+    <Stack
+      spacing={8}
+      direction={matches ? 'column' : 'row'}
+      alignItems="center"
+      justifyContent="center"
+      height="100%"
+    >
       {matches && <ContactUsInfo />}
       <ContactUsForm />
       {!matches && <ContactUsInfo />}

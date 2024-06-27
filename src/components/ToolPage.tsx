@@ -2,9 +2,9 @@ import { Box, CircularProgress, Grid, Link } from '@mui/material'
 import { FC, useLayoutEffect, useMemo } from 'react'
 import { useParams } from 'react-router'
 import { Layout } from '../features/layout/Layout'
+import { useGetData } from '../hooks'
 import { Item } from './molecules/Item'
 import { Feature } from './types'
-import { useGetData } from '../hooks'
 
 export const ToolPage: FC = () => {
   const { category } = useParams<{ type: string; category: Feature }>()
@@ -36,8 +36,15 @@ export const ToolPage: FC = () => {
           data &&
           keys.map((key) => {
             return (
-              <Grid key={key} item xs={12} sm={6} md={6} lg={4} xl={3}>
-                <Link href={`/${category}/${key}`}>
+              <Grid key={key} item xs={12} sm={6} md={6} lg={4} xl={4}>
+                <Link
+                  href={`/${category}/${key}`}
+                  onClick={(e) => {
+                    if ((e.target as HTMLAnchorElement).classList.contains('showMore')) {
+                      e.preventDefault()
+                    }
+                  }}
+                >
                   <Item
                     {...data[key]}
                     sx={{

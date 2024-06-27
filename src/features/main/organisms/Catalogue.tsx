@@ -12,7 +12,9 @@ export const Catalogue: FC = () => {
         <Typography variant="H4">Каталог</Typography>
         <Stack>
           {links.main.map(({ href, title, description }) => {
-            return !!href && <CatalogueItem category={href} title={title} description={description} />
+            return (
+              !!href && <CatalogueItem key={href} category={href} title={title} description={description} />
+            )
           })}
         </Stack>
       </Stack>

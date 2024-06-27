@@ -53,7 +53,7 @@ export const Layout: FC<{ currentFeature: Feature } & StackProps> = ({
                 data?.[item as Feature]?.title ??
                 translate[item as Feature]
               return isLast ? (
-                <Typography>{value}</Typography>
+                <Typography key={item}>{value}</Typography>
               ) : (
                 <Link href={href} key={item}>
                   {value}
